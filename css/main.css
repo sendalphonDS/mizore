@@ -215,6 +215,57 @@ ul {
 }
 
 
+/**Lettering**/
+
+h1.nombre-sitio span {
+    position: relative;
+    text-shadow: 0 0 30px black;
+}
+
+@media only screen and (min-width:992px) {
+    .char1 {
+        top: 20px;
+        right: 20px;
+    }
+    .char2 {
+        top: 0px;
+        right: -20px;
+    }
+    .char3 {
+        top: 10px;
+        right: 20px;
+    }
+    .char4 {
+        top: 5px;
+        right: 10px;
+    }
+    .char5 {
+        top: 15px;
+        right: 10px;
+    }
+    .char6 {
+        top: 5px;
+        right: 10px;
+    }
+    .char7 {
+        top: 20px;
+        right: -10px;
+    }
+    .char8 {
+        top: 0px;
+        right: 10px;
+    }
+    .char9 {
+        top: 10px;
+        right: 20px;
+    }
+    .char10 {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
 /** header**/
 
 div.hero {
@@ -312,6 +363,14 @@ div.barra {
     padding: 20px 0;
 }
 
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 div.logo {
     width: 85%;
     float: left;
@@ -332,6 +391,7 @@ div.logo img {
 
 nav.navegacion-principal {
     display: none;
+    width: 100%;
 }
 
 nav.navegacion-principal a {
@@ -445,8 +505,6 @@ div.programa-evento {
 
 nav.menu-programa {
     width: 100%;
-    border-bottom: 1px solid #fe4918;
-    padding-bottom: 10px;
 }
 
 @media only screen and (min-width:768px) {
@@ -463,6 +521,24 @@ nav.menu-programa a {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
     font-size: 1.2em;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fe4918;
+}
+
+nav.menu-programa a.activo::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 30px;
+    background-image: url('../img/talleres-flecha.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    bottom: -20px;
 }
 
 @media only screen and (min-width:768px) {
@@ -476,6 +552,10 @@ div.detalle-evento p i {
     color: #fe4918;
     font-size: 1.6em;
     margin-right: 10px;
+}
+
+div.ocultar {
+    display: none;
 }
 
 
@@ -647,14 +727,14 @@ div.tabla-precio ul li {
 }
 
 div.tabla-precio ul li:before {
-    font-family: 'Font Awesome 5 Brands';
+    font-family: 'Font Awesome 5 Free Solid';
     display: inline-block;
     vertical-align: top;
     padding: 0 5px;
     font-size: 20px;
     color: green;
     -webkit-font-smoothing: antialiased;
-    content: "\f511";
+    content: '\f058';
 }
 
 div.tabla-precio h3 {
@@ -673,7 +753,6 @@ div.tabla-precio p.numero {
 
 div.mapa {
     height: 420px;
-    background-color: green;
 }
 
 
@@ -810,6 +889,12 @@ footer {
     margin-top: 20px;
 }
 
+footer .site-footer{
+    background-color: blue;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
 footer .contenedor>div {
     color: #ffffff;
     padding: 0px 20px;
@@ -852,6 +937,18 @@ p.copyrigth {
 
 
 /**INTERNAS**/
+
+
+/**conferencias**/
+
+body.conferencia .navegacion-principal .activo {
+    border-bottom: 2px solid #fe4918;
+}
+
+div.galeria a {
+    display: inline-block;
+    margin-bottom: 5px;
+}
 
 
 /**Registro**/
@@ -988,7 +1085,15 @@ div.resumen input {
     display: none;
 }
 
-
+/**calendario**/
+div.dia {
+     width: 40%;
+     float: left;
+     border: 2px solid #e1e1e1;
+ }
+div.dia :hover {
+     background-color: #e1e1e1;
+ }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
