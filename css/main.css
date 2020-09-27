@@ -102,7 +102,7 @@ html {
 }
 
 *,
-*:before*:after {
+*:before,*:after {
     box-sizing: inherit;
 }
 
@@ -334,7 +334,7 @@ p.ciudad {
 }
 
 p.slogan {
-    text-transform: : none!important;
+    text-transform: none!important;
 }
 
 p.slogan span {
@@ -405,6 +405,7 @@ nav.navegacion-principal a {
     display: block;
     text-align: center;
     margin-bottom: 20px;
+    clear: both;
 }
 
 nav.navegacion-principal a:hover {
@@ -734,7 +735,7 @@ div.tabla-precio ul li:before {
     font-size: 20px;
     color: green;
     -webkit-font-smoothing: antialiased;
-    content: '\f058';
+    content: '\f054';
 }
 
 div.tabla-precio h3 {
@@ -941,7 +942,7 @@ p.copyrigth {
 
 /**conferencias**/
 
-body.conferencia .navegacion-principal .activo {
+.navegacion-principal .activo {
     border-bottom: 2px solid #fe4918;
 }
 
@@ -1086,14 +1087,54 @@ div.resumen input {
 }
 
 /**calendario**/
+div.calendario h3 {
+    background-color: #fe4918;
+    clear: both;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+div.calendario::after{
+    clear: both;
+    display: block;
+    content: '';
+}
 div.dia {
-     width: 40%;
-     float: left;
-     border: 2px solid #e1e1e1;
- }
-div.dia :hover {
-     background-color: #e1e1e1;
- }
+   width: 50;
+   float: left;
+   border: 2px solid #e1e1e1;
+   transition: all.3s ease;
+}
+@media only screen and (min-width:768px){
+    div.dia {
+        width: 33.3%;
+        min-height: 240px;
+        padding-top: 20px;
+       
+     }
+}
+
+div.dia:hover {
+    background-color: #e1e1e1;
+    -webkit-transform: scale(1.1);
+}
+div.dia p.titulo{
+    color: #fe9118;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+div.dia p {
+    font-size: 1em;
+}
+div.dia i{
+    color: #fe9118;
+    font-size: 1.6em;
+}
+/**colorbox**/
+div.cboxElement{
+    padding: 30px!important;
+    text-align: center;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
